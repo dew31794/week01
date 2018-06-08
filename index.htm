@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="assets/bootstrap-4.0.0-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body class="index">
+    <header>
+        <div class="navbar navbar-expand navbar-blue" role="navigation">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav nav">
+                        <li class="nav-item"><a class="nav-link active" href="#" id="">待辦事項</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" id="">進行中</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" id="">已完成</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="content col-md-12">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-light btn-lg btn-block"><i class="fas fa-plus"></i> 新增待辦事項</button>
+                    </div>
+                    
+                    <form class="form-horizontal">
+                        <div class="bg-panel box-shadow add-title">
+                            <div class="col-md-12">
+                                <div class="check-done">
+                                    <input class="event" id="event" type="checkbox" value="done" name="">
+                                    <label class="checkbox-style"></label>
+                                </div>
+                                <label class="check-title"> 請輸入待辦事項....</label>
+                                <div class="tool">
+                                    <span class="star"></span>
+                                    <span class="pen"></span>
+                                </div>
+                            </div>
+                            <!-- <i class="fas fa-star"></i> -->
+                            <!-- <i class="fas fa-star"></i> -->
+                        </div>
+                        <div class="bg-panel box-shadow add-content">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="col-sm-12 control-label date-text"><i class="far fa-calendar-alt"></i>截止日期</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control datepicker" name="selltime1" id="selltime1" data-date-format="yyyy-mm-dd" placeholder="yyyy/mm/dd" style="width:120px" value="">
+                                        ~
+                                        <input type="text" class="form-control datepicker" name="selltime2" id="selltime2" data-date-format="yyyy-mm-dd" placeholder="hh:mm" style="width:120px" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-12 control-label file-text"><i class="far fa-file"></i>附件檔案</label>
+                                    <div class="col-sm-12 file-content">
+                                        <!-- <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp"> -->
+                                        <a class="btn btn-file">
+                                            <i class="fas fa-plus"></i>
+                                            <input type="file" class="form-control-file" name="upload[]" id="upload1">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-12 control-label demo-text"><i class="far fa-comment-dots"></i>文字敘述</label>
+                                    <div class="col-sm-12">
+                                        <textarea name="word" id="word" cols="20" rows="5" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-group btn-check">
+                            <a class="btn bg-white btn-cancel" href="#"><i class="fas fa-times"></i> 取消</a>
+                            <a class="btn bg-white btn-add" href="#"><i class="fas fa-plus"></i> 新增</a>
+                        </div>
+                    </form>
+
+                    <div class="my-3 bg-panel list-box star-top">
+                        <div class="col-md-12">
+                            <label class="check-title">
+                                <div class="check-done">
+                                    <input class="event" id="event" type="checkbox" value="done" name="" checked>
+                                    <label class="checkbox-style"></label>
+                                </div>
+                                <span>請輸入待辦事項....</span>
+                            </label>
+                            <div class="tool">
+                                <span class="star"></span>
+                                <span class="pen"></span>
+                            </div>
+                            <div class="info">
+                                <i class="far fa-calendar-alt"></i><span class="event-time">5/04</span>
+                                <i class="far fa-file"></i><span class="event-file">附件名稱</span>
+                                <i class="far fa-comment-dots"></i><span class="event-demo"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3 bg-panel list-box">
+                        <div class="col-md-12">
+                            <label class="check-title">
+                                <div class="check-done">
+                                    <input class="event" id="event" type="checkbox" value="done" name="">
+                                    <label class="checkbox-style"></label>
+                                </div>
+                                <span>請輸入待辦事項....</span>
+                            </label>
+                            <div class="tool">
+                                <span class="star"></span>
+                                <span class="pen"></span>
+                            </div>
+                            <div class="info">
+                                <i class="far fa-calendar-alt"></i><span class="event-time">5/04</span>
+                                <i class="far fa-file"></i><span class="event-file">附件名稱</span>
+                                <i class="far fa-comment-dots"></i><span class="event-demo"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3 bg-panel list-box">
+                        <div class="col-md-12">
+                            <label class="check-title">
+                                <div class="check-done">
+                                    <input class="event" id="event" type="checkbox" value="done" name="">
+                                    <label class="checkbox-style"></label>
+                                </div>
+                                <span>請輸入待辦事項....</span>
+                            </label>
+                            <div class="tool">
+                                <span class="star"></span>
+                                <span class="pen"></span>
+                            </div>
+                            <div class="info">
+                                <i class="far fa-calendar-alt"></i><span class="event-time">5/04</span>
+                                <i class="far fa-file"></i><span class="event-file">附件名稱</span>
+                                <i class="far fa-comment-dots"></i><span class="event-demo"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3 bg-panel list-box">
+                        <div class="col-md-12">
+                            <label class="check-title">
+                                <div class="check-done">
+                                    <input class="event" id="event" type="checkbox" value="done" name="">
+                                    <label class="checkbox-style"></label>
+                                </div>
+                                <span>請輸入待辦事項....</span>
+                            </label>
+                            <div class="tool">
+                                <span class="star"></span>
+                                <span class="pen"></span>
+                            </div>
+                            <div class="info">
+                                <i class="far fa-calendar-alt"></i><span class="event-time">5/04</span>
+                                <i class="far fa-file"></i><span class="event-file">附件名稱</span>
+                                <i class="far fa-comment-dots"></i><span class="event-demo"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <span class="my-3 count">4 tasks left</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+               <div class="copy">
+                    © All Right Reserved.
+               </div>
+               <div class="compnay">
+                   Ming-Sian 網頁設計
+               </div>
+        </div>
+    </footer>
+</body>
+</html>
